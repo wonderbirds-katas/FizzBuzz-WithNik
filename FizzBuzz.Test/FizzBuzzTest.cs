@@ -1,4 +1,5 @@
 using FluentAssertions;
+using Moq;
 
 namespace FizzBuzz.Test;
 
@@ -17,8 +18,10 @@ public class FizzBuzzTest
     [Fact]
     public void Test4()
     {
-        var teacher = new Teacher(new Pupil());
+        var pupilMock = new Mock<IPupil>();
+        var teacher = new Teacher(pupilMock.Object);
         teacher.WantsAnswers(1);
+        pupilMock.Verify(p => p.Answer(), Times.Once);
     }
 }
 
@@ -33,7 +36,7 @@ public class Teacher
 
     public void WantsAnswers(int numberOfAnswers)
     {
-        // _pupil.Answer();
+        _pupil.Answer();
     }
 }
 
