@@ -9,7 +9,7 @@ public class FizzBuzzTest
     {
         var teacher = new Teacher();
         var some = teacher.InquirePupil();
-        some.Should().Be(0);
+        some.Should().Be(1);
     }
 }
 
@@ -17,6 +17,6 @@ public class Teacher
 {
     public int InquirePupil()
     {
-        return 0;
+        return 1;
     }
 }
