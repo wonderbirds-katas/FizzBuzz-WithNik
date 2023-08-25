@@ -54,6 +54,9 @@ public class FizzBuzzTest
         pupilMock.Verify(p => p.Answer(), Times.Exactly(expectedPraises));
         pupilMock.Verify(p => p.Praise(), Times.Exactly(expectedPraises));
     }
+    // Hemingway
+    // Give the Teacher a mockPupil which returns 1,2,3 -> Expect 2 Praises
+    // Give the Teacher a mockPupil which returns 1,2,fizz -> Expect 3 Praises
 }
 
 public class Teacher
