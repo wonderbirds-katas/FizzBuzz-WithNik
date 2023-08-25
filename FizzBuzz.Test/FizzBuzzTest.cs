@@ -20,6 +20,17 @@ public class FizzBuzzTest
         var pupil = teacher.InquirePupil();
         pupil.Should().Be(2);
     }
+
+    [Fact]
+    public void Test3()
+    {
+        var teacher = new Teacher();
+        teacher.InquirePupil();
+        teacher.InquirePupil();
+        teacher.InquirePupil();
+        var pupil = teacher.InquirePupil();
+        pupil.Should().Be(4);
+    }
 }
 
 public class Teacher
