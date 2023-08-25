@@ -5,28 +5,11 @@ namespace FizzBuzz.Test;
 public class FizzBuzzTest
 {
     [Fact]
-    public void Test1()
-    {
-        var teacher = new Teacher();
-        var pupil = teacher.InquirePupil();
-        pupil.Should().Be(1);
-    }
-    
-    [Fact]
-    public void Test2()
-    {
-        var teacher = new Teacher();
-        teacher.InquirePupil();
-        var pupil = teacher.InquirePupil();
-        pupil.Should().Be(2);
-    }
-
-    [Fact]
     public void Test3()
     {
         var teacher = new Teacher();
-        teacher.InquirePupil();
-        teacher.InquirePupil();
+        teacher.InquirePupil().Should().Be(1);
+        teacher.InquirePupil().Should().Be(2);
         teacher.InquirePupil();
         var pupil = teacher.InquirePupil();
         pupil.Should().Be(4);
