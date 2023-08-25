@@ -11,8 +11,7 @@ public class FizzBuzzTest
         teacher.InquirePupil().Should().Be(1);
         teacher.InquirePupil().Should().Be(2);
         teacher.InquirePupil();
-        var pupil = teacher.InquirePupil();
-        pupil.Should().Be(4);
+        teacher.InquirePupil().Should().Be(4);
     }
 }
 
