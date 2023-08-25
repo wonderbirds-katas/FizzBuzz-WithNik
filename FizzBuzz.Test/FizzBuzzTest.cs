@@ -47,7 +47,7 @@ public class Teacher
 
     public void WantsAnswers(int numberOfAnswers)
     {
-        for (int i = 0; i < numberOfAnswers; i++)
+        for (var counter = 0; counter < numberOfAnswers; counter++)
         {
             _pupil.Answer();
             _pupil.Praise();
