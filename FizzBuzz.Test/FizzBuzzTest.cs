@@ -34,6 +34,16 @@ public class FizzBuzzTest
         pupilMock.Verify(p => p.Answer(), Times.Exactly(2));
         pupilMock.Verify(p => p.Praise(), Times.Exactly(2));
     }
+
+    [Fact]
+    public void Test6()
+    {
+        var pupilMock = new Mock<IPupil>();
+        var teacher = new Teacher(pupilMock.Object);
+        teacher.WantsAnswers(3);
+        pupilMock.Verify(p => p.Answer(), Times.Exactly(3));
+        pupilMock.Verify(p => p.Praise(), Times.Exactly(3));
+    }
 }
 
 public class Teacher
