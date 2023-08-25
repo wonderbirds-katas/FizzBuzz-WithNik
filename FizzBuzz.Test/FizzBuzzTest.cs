@@ -7,18 +7,18 @@ public class FizzBuzzTest
     [Fact]
     public void Test3()
     {
-        var teacher = new Teacher();
-        teacher.InquirePupil().Should().Be(1);
-        teacher.InquirePupil().Should().Be(2);
-        teacher.InquirePupil();
-        teacher.InquirePupil().Should().Be(4);
+        var pupil = new Pupil();
+        pupil.Answer().Should().Be(1);
+        pupil.Answer().Should().Be(2);
+        pupil.Answer();
+        pupil.Answer().Should().Be(4);
     }
 }
 
-public class Teacher
+public class Pupil
 {
     private int _count = 1;
-    public int InquirePupil()
+    public int Answer()
     {
         
         return _count ++;
