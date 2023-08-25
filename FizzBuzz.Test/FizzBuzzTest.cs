@@ -8,8 +8,8 @@ public class FizzBuzzTest
     public void Test1()
     {
         var teacher = new Teacher();
-        var some = teacher.InquirePupil();
-        some.Should().Be(1);
+        var pupil = teacher.InquirePupil();
+        pupil.Should().Be(1);
     }
 }
 
