@@ -8,14 +8,14 @@ public class FizzBuzzTest
     public void Test1()
     {
         var teacher = new Teacher();
-        var some = teacher.PointToNextPupil();
+        var some = teacher.InquirePupil();
         some.Should().Be(0);
     }
 }
 
 public class Teacher
 {
-    public int PointToNextPupil()
+    public int InquirePupil()
     {
         return 0;
     }
